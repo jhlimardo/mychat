@@ -1,9 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity , TextInput} from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { useState } from 'react';
+
 export default function Log() {
     const navigation = useNavigation();
+
+    
+
+
     return (
         <View style={styles.container}>
             <View style={styles.text}>
@@ -15,9 +21,12 @@ export default function Log() {
                         <Text style={styles.icono}>+54</Text>
                     </View>
                     <View style={styles.cinputText}>
-                        <Text style={styles.inputText}>Phone</Text>
+                        <TextInput  keyboardType='numeric' maxLength={10}  style={styles.inputText} 
+                        placeholder='Phone' placeholderTextColor='#ffffff' ></TextInput>
+                        
                     </View>
                 </View>
+                
             </View>
             <View style={styles.containerButon}>
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Verify")}>
@@ -70,6 +79,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         borderRadius: 12,
         alignItems: 'baseline',
+        marginTop:'10%'
 
 
     },
@@ -93,11 +103,13 @@ const styles = StyleSheet.create({
     },
     inputText: {
         color: '#ffffff',
-        fontSize: 30,
-
+        fontSize: 28,
+        
         width: '100%',
         textAlign: 'center',
         height: '90%',
+        
+        
 
     },
     log: {

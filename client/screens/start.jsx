@@ -12,7 +12,7 @@ export default function Start() {
 
       </View>
       <View style={styles.containerButon}>
-        <Text style={styles.log}>Log in with:</Text>
+        <Text style={styles.log}>Log in with :</Text>
         <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate("Log")}>
           <Text style={styles.icono}><FontAwesome style={styles.icono} name="phone" size={35} color="rgba(0, 117, 167, 1)" /></Text><Text style={styles.buttonText}>Phone Number</Text>
         </TouchableOpacity>
