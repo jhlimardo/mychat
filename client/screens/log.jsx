@@ -26,7 +26,7 @@ export default function Log() {
                         
                     </View>
                 </View>
-                
+    
             </View>
             <View style={styles.containerButon}>
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Verify")}>
