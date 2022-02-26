@@ -8,12 +8,16 @@ module.exports = (sequelize) => {
             primaryKey: true,
             allowNull: false
         }, 
+        contactName: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         phoneNumber: { 
             type: DataTypes.STRING,
             allowNull: false,
         },
     },
     {
-        timestamp: false
+        timestamps: false
     })
 };
