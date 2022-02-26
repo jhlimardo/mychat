@@ -1,7 +1,7 @@
 const express = require('express');
 const morgan = require('morgan'); // middleware para peticiones HTTP dregistra las request
 const cors = require('cors');
-const routes = require('./routes/index.js');
+const routes = require('./routes/index');
 require('./db.js');
 
 const server = express();
